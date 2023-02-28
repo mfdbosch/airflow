@@ -1,0 +1,315 @@
+[2023-02-10 10:07:41 +0800] [1652] [INFO] Starting gunicorn 20.1.0
+[2023-02-10 10:07:41 +0800] [1652] [ERROR] Connection in use: ('::', 8793)
+[2023-02-10 10:07:41 +0800] [1652] [ERROR] Retrying in 1 second.
+[2023-02-10 10:07:42 +0800] [1652] [ERROR] Connection in use: ('::', 8793)
+[2023-02-10 10:07:42 +0800] [1652] [ERROR] Retrying in 1 second.
+[2023-02-10 10:07:43 +0800] [1652] [ERROR] Connection in use: ('::', 8793)
+[2023-02-10 10:07:43 +0800] [1652] [ERROR] Retrying in 1 second.
+[2023-02-10 10:07:44 +0800] [1652] [ERROR] Connection in use: ('::', 8793)
+[2023-02-10 10:07:44 +0800] [1652] [ERROR] Retrying in 1 second.
+[2023-02-10 10:07:45 +0800] [1652] [ERROR] Connection in use: ('::', 8793)
+[2023-02-10 10:07:45 +0800] [1652] [ERROR] Retrying in 1 second.
+[2023-02-10 10:07:46 +0800] [1652] [ERROR] Can't connect to ('::', 8793)
+[2023-02-10 23:39:49 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:1597)
+[2023-02-10 23:39:49 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:1598)
+[2023-02-10 23:39:49 +0800] [1597] [INFO] Worker exiting (pid: 1597)
+[2023-02-10 23:39:49 +0800] [1598] [INFO] Worker exiting (pid: 1598)
+[2023-02-10 23:39:49 +0800] [1596] [WARNING] Worker with pid 1598 was terminated due to signal 9
+[2023-02-10 23:39:49 +0800] [25535] [INFO] Booting worker with pid: 25535
+[2023-02-10 23:39:49 +0800] [25536] [INFO] Booting worker with pid: 25536
+[2023-02-11 01:40:02 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25535)
+[2023-02-11 01:40:02 +0800] [25535] [INFO] Worker exiting (pid: 25535)
+[2023-02-11 01:40:03 +0800] [25563] [INFO] Booting worker with pid: 25563
+[2023-02-11 02:26:02 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25536)
+[2023-02-11 02:26:02 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25563)
+[2023-02-11 02:26:02 +0800] [25563] [INFO] Worker exiting (pid: 25563)
+[2023-02-11 02:26:02 +0800] [25536] [INFO] Worker exiting (pid: 25536)
+[2023-02-11 02:26:03 +0800] [1596] [WARNING] Worker with pid 25563 was terminated due to signal 9
+[2023-02-11 02:26:03 +0800] [1596] [WARNING] Worker with pid 25536 was terminated due to signal 9
+[2023-02-11 02:26:03 +0800] [25587] [INFO] Booting worker with pid: 25587
+[2023-02-11 02:26:03 +0800] [25590] [INFO] Booting worker with pid: 25590
+[2023-02-11 04:26:25 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25587)
+[2023-02-11 04:26:25 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25590)
+[2023-02-11 04:26:25 +0800] [25587] [INFO] Worker exiting (pid: 25587)
+[2023-02-11 04:26:25 +0800] [25590] [INFO] Worker exiting (pid: 25590)
+[2023-02-11 04:26:26 +0800] [1596] [WARNING] Worker with pid 25590 was terminated due to signal 9
+[2023-02-11 04:26:26 +0800] [1596] [WARNING] Worker with pid 25587 was terminated due to signal 9
+[2023-02-11 04:26:26 +0800] [25683] [INFO] Booting worker with pid: 25683
+[2023-02-11 04:26:26 +0800] [25682] [INFO] Booting worker with pid: 25682
+[2023-02-11 06:26:38 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25682)
+[2023-02-11 06:26:38 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25683)
+[2023-02-11 06:26:38 +0800] [25682] [INFO] Worker exiting (pid: 25682)
+[2023-02-11 06:26:38 +0800] [25683] [INFO] Worker exiting (pid: 25683)
+[2023-02-11 06:26:39 +0800] [1596] [WARNING] Worker with pid 25682 was terminated due to signal 9
+[2023-02-11 06:26:39 +0800] [1596] [WARNING] Worker with pid 25683 was terminated due to signal 9
+[2023-02-11 06:26:39 +0800] [25699] [INFO] Booting worker with pid: 25699
+[2023-02-11 06:26:39 +0800] [25698] [INFO] Booting worker with pid: 25698
+[2023-02-11 08:26:50 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25698)
+[2023-02-11 08:26:50 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25699)
+[2023-02-11 08:26:50 +0800] [25699] [INFO] Worker exiting (pid: 25699)
+[2023-02-11 08:26:50 +0800] [25698] [INFO] Worker exiting (pid: 25698)
+[2023-02-11 08:26:51 +0800] [1596] [WARNING] Worker with pid 25698 was terminated due to signal 9
+[2023-02-11 08:26:51 +0800] [1596] [WARNING] Worker with pid 25699 was terminated due to signal 9
+[2023-02-11 08:26:51 +0800] [25714] [INFO] Booting worker with pid: 25714
+[2023-02-11 08:26:51 +0800] [25713] [INFO] Booting worker with pid: 25713
+[2023-02-11 09:15:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25713)
+[2023-02-11 09:15:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25714)
+[2023-02-11 09:15:17 +0800] [25713] [INFO] Worker exiting (pid: 25713)
+[2023-02-11 09:15:17 +0800] [25714] [INFO] Worker exiting (pid: 25714)
+[2023-02-11 09:15:18 +0800] [1596] [WARNING] Worker with pid 25714 was terminated due to signal 9
+[2023-02-11 09:15:18 +0800] [1596] [WARNING] Worker with pid 25713 was terminated due to signal 9
+[2023-02-11 09:15:18 +0800] [25731] [INFO] Booting worker with pid: 25731
+[2023-02-11 09:15:18 +0800] [25733] [INFO] Booting worker with pid: 25733
+[2023-02-11 09:40:53 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25731)
+[2023-02-11 09:40:53 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25733)
+[2023-02-11 09:40:53 +0800] [25733] [INFO] Worker exiting (pid: 25733)
+[2023-02-11 09:40:53 +0800] [25731] [INFO] Worker exiting (pid: 25731)
+[2023-02-11 09:40:54 +0800] [1596] [WARNING] Worker with pid 25733 was terminated due to signal 9
+[2023-02-11 09:40:54 +0800] [1596] [WARNING] Worker with pid 25731 was terminated due to signal 9
+[2023-02-11 09:40:54 +0800] [25744] [INFO] Booting worker with pid: 25744
+[2023-02-11 09:40:54 +0800] [25746] [INFO] Booting worker with pid: 25746
+[2023-02-11 10:39:09 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25744)
+[2023-02-11 10:39:10 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25746)
+[2023-02-11 10:39:10 +0800] [25744] [INFO] Worker exiting (pid: 25744)
+[2023-02-11 10:39:10 +0800] [25746] [INFO] Worker exiting (pid: 25746)
+[2023-02-11 10:39:11 +0800] [1596] [WARNING] Worker with pid 25744 was terminated due to signal 9
+[2023-02-11 10:39:11 +0800] [1596] [WARNING] Worker with pid 25746 was terminated due to signal 9
+[2023-02-11 10:39:11 +0800] [25845] [INFO] Booting worker with pid: 25845
+[2023-02-11 10:39:11 +0800] [25847] [INFO] Booting worker with pid: 25847
+[2023-02-11 12:40:06 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25845)
+[2023-02-11 12:40:06 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25847)
+[2023-02-11 12:40:06 +0800] [25847] [INFO] Worker exiting (pid: 25847)
+[2023-02-11 12:40:06 +0800] [25845] [INFO] Worker exiting (pid: 25845)
+[2023-02-11 12:40:07 +0800] [1596] [WARNING] Worker with pid 25847 was terminated due to signal 9
+[2023-02-11 12:40:07 +0800] [1596] [WARNING] Worker with pid 25845 was terminated due to signal 9
+[2023-02-11 12:40:07 +0800] [25881] [INFO] Booting worker with pid: 25881
+[2023-02-11 12:40:07 +0800] [25879] [INFO] Booting worker with pid: 25879
+[2023-02-11 17:18:26 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25879)
+[2023-02-11 17:18:26 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25881)
+[2023-02-11 17:18:26 +0800] [25879] [INFO] Worker exiting (pid: 25879)
+[2023-02-11 17:18:26 +0800] [25881] [INFO] Worker exiting (pid: 25881)
+[2023-02-11 17:18:27 +0800] [1596] [WARNING] Worker with pid 25879 was terminated due to signal 9
+[2023-02-11 17:18:27 +0800] [1596] [WARNING] Worker with pid 25881 was terminated due to signal 9
+[2023-02-11 17:18:27 +0800] [25979] [INFO] Booting worker with pid: 25979
+[2023-02-11 17:18:27 +0800] [25982] [INFO] Booting worker with pid: 25982
+[2023-02-11 17:39:46 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25979)
+[2023-02-11 17:39:46 +0800] [25979] [INFO] Worker exiting (pid: 25979)
+[2023-02-11 17:39:48 +0800] [26071] [INFO] Booting worker with pid: 26071
+[2023-02-11 18:52:11 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:25982)
+[2023-02-11 18:52:12 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26071)
+[2023-02-11 18:52:12 +0800] [26071] [INFO] Worker exiting (pid: 26071)
+[2023-02-11 18:52:12 +0800] [25982] [INFO] Worker exiting (pid: 25982)
+[2023-02-11 18:52:12 +0800] [1596] [WARNING] Worker with pid 25982 was terminated due to signal 9
+[2023-02-11 18:52:12 +0800] [26312] [INFO] Booting worker with pid: 26312
+[2023-02-11 18:52:12 +0800] [26313] [INFO] Booting worker with pid: 26313
+[2023-02-11 20:52:20 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26312)
+[2023-02-11 20:52:20 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26313)
+[2023-02-11 20:52:20 +0800] [26312] [INFO] Worker exiting (pid: 26312)
+[2023-02-11 20:52:21 +0800] [26313] [INFO] Worker exiting (pid: 26313)
+[2023-02-11 20:52:21 +0800] [26331] [INFO] Booting worker with pid: 26331
+[2023-02-11 20:52:21 +0800] [26332] [INFO] Booting worker with pid: 26332
+[2023-02-11 21:39:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26331)
+[2023-02-11 21:39:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26332)
+[2023-02-11 21:39:17 +0800] [26331] [INFO] Worker exiting (pid: 26331)
+[2023-02-11 21:39:17 +0800] [26332] [INFO] Worker exiting (pid: 26332)
+[2023-02-11 21:39:17 +0800] [26345] [INFO] Booting worker with pid: 26345
+[2023-02-11 21:39:17 +0800] [26346] [INFO] Booting worker with pid: 26346
+[2023-02-11 23:39:30 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26345)
+[2023-02-11 23:39:30 +0800] [26345] [INFO] Worker exiting (pid: 26345)
+[2023-02-11 23:39:30 +0800] [26430] [INFO] Booting worker with pid: 26430
+[2023-02-12 01:39:39 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26346)
+[2023-02-12 01:39:39 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26430)
+[2023-02-12 01:39:39 +0800] [26430] [INFO] Worker exiting (pid: 26430)
+[2023-02-12 01:39:39 +0800] [26346] [INFO] Worker exiting (pid: 26346)
+[2023-02-12 01:39:39 +0800] [1596] [WARNING] Worker with pid 26430 was terminated due to signal 9
+[2023-02-12 01:39:39 +0800] [26446] [INFO] Booting worker with pid: 26446
+[2023-02-12 01:39:39 +0800] [26447] [INFO] Booting worker with pid: 26447
+[2023-02-12 02:33:40 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26446)
+[2023-02-12 02:33:40 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26447)
+[2023-02-12 02:33:40 +0800] [26447] [INFO] Worker exiting (pid: 26447)
+[2023-02-12 02:33:40 +0800] [26446] [INFO] Worker exiting (pid: 26446)
+[2023-02-12 02:33:41 +0800] [26473] [INFO] Booting worker with pid: 26473
+[2023-02-12 02:33:41 +0800] [26475] [INFO] Booting worker with pid: 26475
+[2023-02-12 02:35:43 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26473)
+[2023-02-12 02:35:43 +0800] [26473] [INFO] Worker exiting (pid: 26473)
+[2023-02-12 02:35:43 +0800] [26590] [INFO] Booting worker with pid: 26590
+[2023-02-12 02:40:31 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26475)
+[2023-02-12 02:40:31 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26590)
+[2023-02-12 02:40:31 +0800] [26475] [INFO] Worker exiting (pid: 26475)
+[2023-02-12 02:40:31 +0800] [26590] [INFO] Worker exiting (pid: 26590)
+[2023-02-12 02:40:31 +0800] [1596] [WARNING] Worker with pid 26590 was terminated due to signal 9
+[2023-02-12 02:40:31 +0800] [26644] [INFO] Booting worker with pid: 26644
+[2023-02-12 02:40:31 +0800] [26645] [INFO] Booting worker with pid: 26645
+[2023-02-12 02:42:16 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26644)
+[2023-02-12 02:42:16 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26645)
+[2023-02-12 02:42:16 +0800] [26644] [INFO] Worker exiting (pid: 26644)
+[2023-02-12 02:42:16 +0800] [26645] [INFO] Worker exiting (pid: 26645)
+[2023-02-12 02:42:16 +0800] [26660] [INFO] Booting worker with pid: 26660
+[2023-02-12 02:42:16 +0800] [26661] [INFO] Booting worker with pid: 26661
+[2023-02-12 02:44:01 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26660)
+[2023-02-12 02:44:01 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26661)
+[2023-02-12 02:44:01 +0800] [26660] [INFO] Worker exiting (pid: 26660)
+[2023-02-12 02:44:01 +0800] [26661] [INFO] Worker exiting (pid: 26661)
+[2023-02-12 02:44:02 +0800] [1596] [WARNING] Worker with pid 26661 was terminated due to signal 9
+[2023-02-12 02:44:02 +0800] [26673] [INFO] Booting worker with pid: 26673
+[2023-02-12 02:44:02 +0800] [26674] [INFO] Booting worker with pid: 26674
+[2023-02-12 02:45:43 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26673)
+[2023-02-12 02:45:43 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26674)
+[2023-02-12 02:45:43 +0800] [26673] [INFO] Worker exiting (pid: 26673)
+[2023-02-12 02:45:43 +0800] [26674] [INFO] Worker exiting (pid: 26674)
+[2023-02-12 02:45:44 +0800] [26695] [INFO] Booting worker with pid: 26695
+[2023-02-12 02:45:44 +0800] [26699] [INFO] Booting worker with pid: 26699
+[2023-02-12 02:47:57 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26695)
+[2023-02-12 02:47:57 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26699)
+[2023-02-12 02:47:57 +0800] [26695] [INFO] Worker exiting (pid: 26695)
+[2023-02-12 02:47:57 +0800] [26699] [INFO] Worker exiting (pid: 26699)
+[2023-02-12 02:47:58 +0800] [1596] [WARNING] Worker with pid 26695 was terminated due to signal 9
+[2023-02-12 02:47:58 +0800] [26728] [INFO] Booting worker with pid: 26728
+[2023-02-12 02:47:58 +0800] [26730] [INFO] Booting worker with pid: 26730
+[2023-02-12 02:49:10 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26728)
+[2023-02-12 02:49:10 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26730)
+[2023-02-12 02:49:10 +0800] [26730] [INFO] Worker exiting (pid: 26730)
+[2023-02-12 02:49:10 +0800] [26728] [INFO] Worker exiting (pid: 26728)
+[2023-02-12 02:49:11 +0800] [26755] [INFO] Booting worker with pid: 26755
+[2023-02-12 02:49:11 +0800] [26756] [INFO] Booting worker with pid: 26756
+[2023-02-12 02:52:06 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26755)
+[2023-02-12 02:52:06 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26756)
+[2023-02-12 02:52:06 +0800] [26755] [INFO] Worker exiting (pid: 26755)
+[2023-02-12 02:52:06 +0800] [26756] [INFO] Worker exiting (pid: 26756)
+[2023-02-12 02:52:06 +0800] [1596] [WARNING] Worker with pid 26756 was terminated due to signal 9
+[2023-02-12 02:52:06 +0800] [26770] [INFO] Booting worker with pid: 26770
+[2023-02-12 02:52:06 +0800] [26771] [INFO] Booting worker with pid: 26771
+[2023-02-12 02:53:48 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26770)
+[2023-02-12 02:53:48 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26771)
+[2023-02-12 02:53:48 +0800] [26770] [INFO] Worker exiting (pid: 26770)
+[2023-02-12 02:53:48 +0800] [26771] [INFO] Worker exiting (pid: 26771)
+[2023-02-12 02:53:48 +0800] [26785] [INFO] Booting worker with pid: 26785
+[2023-02-12 02:53:48 +0800] [26786] [INFO] Booting worker with pid: 26786
+[2023-02-12 02:55:23 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26785)
+[2023-02-12 02:55:23 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26786)
+[2023-02-12 02:55:23 +0800] [26785] [INFO] Worker exiting (pid: 26785)
+[2023-02-12 02:55:23 +0800] [26786] [INFO] Worker exiting (pid: 26786)
+[2023-02-12 02:55:23 +0800] [26814] [INFO] Booting worker with pid: 26814
+[2023-02-12 02:55:23 +0800] [26815] [INFO] Booting worker with pid: 26815
+[2023-02-12 02:57:09 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26814)
+[2023-02-12 02:57:09 +0800] [26814] [INFO] Worker exiting (pid: 26814)
+[2023-02-12 02:57:10 +0800] [26836] [INFO] Booting worker with pid: 26836
+[2023-02-12 03:05:13 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26815)
+[2023-02-12 03:05:13 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26836)
+[2023-02-12 03:05:13 +0800] [26836] [INFO] Worker exiting (pid: 26836)
+[2023-02-12 03:05:13 +0800] [26815] [INFO] Worker exiting (pid: 26815)
+[2023-02-12 03:05:13 +0800] [26850] [INFO] Booting worker with pid: 26850
+[2023-02-12 03:05:13 +0800] [26851] [INFO] Booting worker with pid: 26851
+[2023-02-12 05:05:22 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26850)
+[2023-02-12 05:05:22 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26851)
+[2023-02-12 05:05:22 +0800] [26850] [INFO] Worker exiting (pid: 26850)
+[2023-02-12 05:05:22 +0800] [26851] [INFO] Worker exiting (pid: 26851)
+[2023-02-12 05:05:22 +0800] [26881] [INFO] Booting worker with pid: 26881
+[2023-02-12 05:05:22 +0800] [26882] [INFO] Booting worker with pid: 26882
+[2023-02-12 05:20:15 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26881)
+[2023-02-12 05:20:15 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26882)
+[2023-02-12 05:20:15 +0800] [26881] [INFO] Worker exiting (pid: 26881)
+[2023-02-12 05:20:15 +0800] [26882] [INFO] Worker exiting (pid: 26882)
+[2023-02-12 05:20:15 +0800] [26901] [INFO] Booting worker with pid: 26901
+[2023-02-12 05:20:15 +0800] [26902] [INFO] Booting worker with pid: 26902
+[2023-02-12 05:41:38 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26901)
+[2023-02-12 05:41:38 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26902)
+[2023-02-12 05:41:38 +0800] [26901] [INFO] Worker exiting (pid: 26901)
+[2023-02-12 05:41:38 +0800] [26902] [INFO] Worker exiting (pid: 26902)
+[2023-02-12 05:41:38 +0800] [1596] [WARNING] Worker with pid 26902 was terminated due to signal 9
+[2023-02-12 05:41:38 +0800] [26916] [INFO] Booting worker with pid: 26916
+[2023-02-12 05:41:38 +0800] [26917] [INFO] Booting worker with pid: 26917
+[2023-02-12 11:18:14 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26916)
+[2023-02-12 11:18:14 +0800] [26916] [INFO] Worker exiting (pid: 26916)
+[2023-02-12 11:18:15 +0800] [27004] [INFO] Booting worker with pid: 27004
+[2023-02-12 12:10:26 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:26917)
+[2023-02-12 12:10:26 +0800] [26917] [INFO] Worker exiting (pid: 26917)
+[2023-02-12 12:10:26 +0800] [27028] [INFO] Booting worker with pid: 27028
+[2023-02-12 14:55:13 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27028)
+[2023-02-12 14:55:13 +0800] [27028] [INFO] Worker exiting (pid: 27028)
+[2023-02-12 14:55:15 +0800] [27132] [INFO] Booting worker with pid: 27132
+[2023-02-12 19:31:19 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27004)
+[2023-02-12 19:31:19 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27132)
+[2023-02-12 19:31:19 +0800] [27132] [INFO] Worker exiting (pid: 27132)
+[2023-02-12 19:31:19 +0800] [27004] [INFO] Worker exiting (pid: 27004)
+[2023-02-12 19:31:20 +0800] [1596] [WARNING] Worker with pid 27132 was terminated due to signal 9
+[2023-02-12 19:31:20 +0800] [27173] [INFO] Booting worker with pid: 27173
+[2023-02-12 19:31:20 +0800] [27181] [INFO] Booting worker with pid: 27181
+[2023-02-13 03:44:26 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27173)
+[2023-02-13 03:44:26 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27181)
+[2023-02-13 03:44:26 +0800] [27181] [INFO] Worker exiting (pid: 27181)
+[2023-02-13 03:44:26 +0800] [27173] [INFO] Worker exiting (pid: 27173)
+[2023-02-13 03:44:27 +0800] [1596] [WARNING] Worker with pid 27181 was terminated due to signal 9
+[2023-02-13 03:44:27 +0800] [1596] [WARNING] Worker with pid 27173 was terminated due to signal 9
+[2023-02-13 03:44:27 +0800] [27273] [INFO] Booting worker with pid: 27273
+[2023-02-13 03:44:27 +0800] [27272] [INFO] Booting worker with pid: 27272
+[2023-02-13 08:07:14 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27272)
+[2023-02-13 08:07:14 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27273)
+[2023-02-13 08:07:14 +0800] [27273] [INFO] Worker exiting (pid: 27273)
+[2023-02-13 08:07:14 +0800] [27272] [INFO] Worker exiting (pid: 27272)
+[2023-02-13 08:07:15 +0800] [1596] [WARNING] Worker with pid 27272 was terminated due to signal 9
+[2023-02-13 08:07:15 +0800] [1596] [WARNING] Worker with pid 27273 was terminated due to signal 9
+[2023-02-13 08:07:15 +0800] [27325] [INFO] Booting worker with pid: 27325
+[2023-02-13 08:07:15 +0800] [27326] [INFO] Booting worker with pid: 27326
+[2023-02-13 13:09:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27325)
+[2023-02-13 13:09:17 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:27326)
+[2023-02-13 13:09:17 +0800] [27325] [INFO] Worker exiting (pid: 27325)
+[2023-02-13 13:09:17 +0800] [27326] [INFO] Worker exiting (pid: 27326)
+[2023-02-13 13:09:17 +0800] [33345] [INFO] Booting worker with pid: 33345
+[2023-02-13 13:09:17 +0800] [33346] [INFO] Booting worker with pid: 33346
+[2023-02-13 13:11:19 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33345)
+[2023-02-13 13:11:19 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33346)
+[2023-02-13 13:11:19 +0800] [33345] [INFO] Worker exiting (pid: 33345)
+[2023-02-13 13:11:19 +0800] [33346] [INFO] Worker exiting (pid: 33346)
+[2023-02-13 13:11:20 +0800] [33523] [INFO] Booting worker with pid: 33523
+[2023-02-13 13:11:20 +0800] [33524] [INFO] Booting worker with pid: 33524
+[2023-02-13 13:19:49 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33523)
+[2023-02-13 13:19:49 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33524)
+[2023-02-13 13:19:49 +0800] [33523] [INFO] Worker exiting (pid: 33523)
+[2023-02-13 13:19:49 +0800] [33524] [INFO] Worker exiting (pid: 33524)
+[2023-02-13 13:19:50 +0800] [33539] [INFO] Booting worker with pid: 33539
+[2023-02-13 13:19:50 +0800] [33540] [INFO] Booting worker with pid: 33540
+[2023-02-13 23:29:33 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33539)
+[2023-02-13 23:29:33 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:33540)
+[2023-02-13 23:29:33 +0800] [33540] [INFO] Worker exiting (pid: 33540)
+[2023-02-13 23:29:33 +0800] [33539] [INFO] Worker exiting (pid: 33539)
+[2023-02-13 23:29:34 +0800] [46409] [INFO] Booting worker with pid: 46409
+[2023-02-13 23:29:34 +0800] [46411] [INFO] Booting worker with pid: 46411
+[2023-02-14 01:29:46 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46409)
+[2023-02-14 01:29:46 +0800] [46409] [INFO] Worker exiting (pid: 46409)
+[2023-02-14 01:29:49 +0800] [46427] [INFO] Booting worker with pid: 46427
+[2023-02-14 03:30:08 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46411)
+[2023-02-14 03:30:08 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46427)
+[2023-02-14 03:30:08 +0800] [46411] [INFO] Worker exiting (pid: 46411)
+[2023-02-14 03:30:08 +0800] [46427] [INFO] Worker exiting (pid: 46427)
+[2023-02-14 03:30:09 +0800] [46530] [INFO] Booting worker with pid: 46530
+[2023-02-14 03:30:09 +0800] [46531] [INFO] Booting worker with pid: 46531
+[2023-02-14 04:23:34 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46530)
+[2023-02-14 04:23:34 +0800] [46530] [INFO] Worker exiting (pid: 46530)
+[2023-02-14 04:23:36 +0800] [46541] [INFO] Booting worker with pid: 46541
+[2023-02-14 06:23:47 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46531)
+[2023-02-14 06:23:47 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46541)
+[2023-02-14 06:23:47 +0800] [46531] [INFO] Worker exiting (pid: 46531)
+[2023-02-14 06:23:47 +0800] [46541] [INFO] Worker exiting (pid: 46541)
+[2023-02-14 06:23:48 +0800] [46558] [INFO] Booting worker with pid: 46558
+[2023-02-14 06:23:48 +0800] [46557] [INFO] Booting worker with pid: 46557
+[2023-02-14 07:44:33 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46557)
+[2023-02-14 07:44:33 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46558)
+[2023-02-14 07:44:33 +0800] [46558] [INFO] Worker exiting (pid: 46558)
+[2023-02-14 07:44:33 +0800] [46557] [INFO] Worker exiting (pid: 46557)
+[2023-02-14 07:44:34 +0800] [1596] [WARNING] Worker with pid 46558 was terminated due to signal 9
+[2023-02-14 07:44:34 +0800] [1596] [WARNING] Worker with pid 46557 was terminated due to signal 9
+[2023-02-14 07:44:34 +0800] [46567] [INFO] Booting worker with pid: 46567
+[2023-02-14 07:44:34 +0800] [46566] [INFO] Booting worker with pid: 46566
+[2023-02-14 08:31:27 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46566)
+[2023-02-14 08:31:27 +0800] [1596] [CRITICAL] WORKER TIMEOUT (pid:46567)
+[2023-02-14 08:31:27 +0800] [46566] [INFO] Worker exiting (pid: 46566)
+[2023-02-14 08:31:27 +0800] [46567] [INFO] Worker exiting (pid: 46567)
+[2023-02-14 08:31:28 +0800] [1596] [WARNING] Worker with pid 46567 was terminated due to signal 9
+[2023-02-14 08:31:28 +0800] [1596] [WARNING] Worker with pid 46566 was terminated due to signal 9
+[2023-02-14 08:31:29 +0800] [46578] [INFO] Booting worker with pid: 46578
+[2023-02-14 08:31:29 +0800] [46582] [INFO] Booting worker with pid: 46582
+[2023-02-14 15:02:42 +0800] [1596] [INFO] Handling signal: term
+[2023-02-14 15:02:42 +0800] [46582] [INFO] Worker exiting (pid: 46582)
+[2023-02-14 15:02:42 +0800] [46578] [INFO] Worker exiting (pid: 46578)
+[2023-02-14 15:02:43 +0800] [1596] [INFO] Shutting down: Master

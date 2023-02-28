@@ -1,0 +1,399 @@
+2023-01-12 15:19:29,707 INFO - Starting the scheduler
+2023-01-12 15:19:29,710 INFO - Processing each file at most -1 times
+2023-01-12 15:19:29,715 INFO - Loaded executor: SequentialExecutor
+2023-01-12 15:19:29,721 INFO - Launched DagFileProcessorManager with pid: 64177
+2023-01-12 15:19:29,726 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:24:32,750 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:29:33,402 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:34:37,385 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:39:37,710 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:44:37,824 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:49:38,240 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:54:41,615 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 15:59:41,661 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:04:42,965 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:09:43,575 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:14:45,885 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:19:47,117 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:21:14,101 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-12T08:17:57.694004+00:00, run_after=2023-01-13T08:17:57.694004+00:00
+2023-01-12 16:21:14,144 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-11 08:17:57.694004+00:00: scheduled__2023-01-11T08:17:57.694004+00:00, state:running, queued_at: 2023-01-12 08:21:14.034834+00:00. externally triggered: False> successful
+2023-01-12 16:21:14,146 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-11 08:17:57.694004+00:00, run_id=scheduled__2023-01-11T08:17:57.694004+00:00, run_start_date=2023-01-12 08:21:14.126075+00:00, run_end_date=2023-01-12 08:21:14.146212+00:00, run_duration=0.020137, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-11 08:17:57.694004+00:00, data_interval_end=2023-01-12 08:17:57.694004+00:00, dag_hash=47082e153b501fdaaab0fa1d4dc5c702
+2023-01-12 16:21:14,150 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-12T08:17:57.694004+00:00, run_after=2023-01-13T08:17:57.694004+00:00
+2023-01-12 16:24:47,976 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:29:51,658 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:34:55,130 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:39:57,216 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:44:17,687 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:44:13.945315+00:00 [scheduled]>
+2023-01-12 16:44:17,688 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-12 16:44:17,689 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:44:13.945315+00:00 [scheduled]>
+2023-01-12 16:44:17,694 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-12T08:44:13.945315+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-12 16:44:17,695 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:44:13.945315+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:44:17,697 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:44:13.945315+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:44:23,927 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-12T08:44:13.945315+00:00 exited with status success for try_number 1
+2023-01-12 16:44:23,944 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-12T08:44:13.945315+00:00, map_index=-1, run_start_date=2023-01-12 08:44:22.509573+00:00, run_end_date=None, run_duration=None, state=running, executor_state=success, try_number=1, max_tries=1, job_id=4, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-12 08:44:17.690828+00:00, queued_by_job_id=3, pid=67811
+2023-01-12 16:44:23,971 WARNING - Failing (1) jobs without heartbeat after 2023-01-12 08:39:23.967369+00:00
+2023-01-12 16:44:23,974 ERROR - Detected zombie job: {'full_filepath': '/Users/jiazhenwang/workspace/airflow/dags/download_stock_price.py', 'processor_subdir': '/Users/jiazhenwang/workspace/airflow/dags', 'msg': "{'DAG Id': 'Download_Stock_Price', 'Task Id': 'download_prices', 'Run Id': 'manual__2023-01-12T08:44:13.945315+00:00', 'Hostname': 'logi-fvfdf085p3yx.local'}", 'simple_task_instance': <airflow.models.taskinstance.SimpleTaskInstance object at 0x7fd608bffeb0>, 'is_failure_callback': True}
+2023-01-12 16:44:57,231 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:49:33,144 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:44:13.945315+00:00 [scheduled]>
+2023-01-12 16:49:33,146 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-12 16:49:33,147 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:44:13.945315+00:00 [scheduled]>
+2023-01-12 16:49:33,150 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-12T08:44:13.945315+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-01-12 16:49:33,151 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:44:13.945315+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:49:33,154 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:44:13.945315+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:49:40,553 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-12T08:44:13.945315+00:00 exited with status success for try_number 2
+2023-01-12 16:49:40,563 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-12T08:44:13.945315+00:00, map_index=-1, run_start_date=2023-01-12 08:49:39.300549+00:00, run_end_date=None, run_duration=6.45852, state=running, executor_state=success, try_number=2, max_tries=1, job_id=5, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-12 08:49:33.148685+00:00, queued_by_job_id=3, pid=68006
+2023-01-12 16:49:40,587 WARNING - Failing (1) jobs without heartbeat after 2023-01-12 08:44:40.585282+00:00
+2023-01-12 16:49:40,590 ERROR - Detected zombie job: {'full_filepath': '/Users/jiazhenwang/workspace/airflow/dags/download_stock_price.py', 'processor_subdir': '/Users/jiazhenwang/workspace/airflow/dags', 'msg': "{'DAG Id': 'Download_Stock_Price', 'Task Id': 'download_prices', 'Run Id': 'manual__2023-01-12T08:44:13.945315+00:00', 'Hostname': 'logi-fvfdf085p3yx.local'}", 'simple_task_instance': <airflow.models.taskinstance.SimpleTaskInstance object at 0x7fd608d03880>, 'is_failure_callback': True}
+2023-01-12 16:49:46,975 ERROR - Marking run <DagRun Download_Stock_Price @ 2023-01-12 08:44:13.945315+00:00: manual__2023-01-12T08:44:13.945315+00:00, state:running, queued_at: 2023-01-12 08:44:13.955471+00:00. externally triggered: True> failed
+2023-01-12 16:49:46,976 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-12 08:44:13.945315+00:00, run_id=manual__2023-01-12T08:44:13.945315+00:00, run_start_date=2023-01-12 08:44:17.664433+00:00, run_end_date=2023-01-12 08:49:46.976459+00:00, run_duration=329.312026, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-01-11 08:44:13.945315+00:00, data_interval_end=2023-01-12 08:44:13.945315+00:00, dag_hash=a53adf0e6148c7c0fe30682f6158488f
+2023-01-12 16:49:46,980 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-12T08:44:13.945315+00:00, run_after=2023-01-13T08:44:13.945315+00:00
+2023-01-12 16:50:00,437 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:52:54,361 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:52:53.209738+00:00 [scheduled]>
+2023-01-12 16:52:54,363 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-12 16:52:54,364 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:52:53.209738+00:00 [scheduled]>
+2023-01-12 16:52:54,367 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-12T08:52:53.209738+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-12 16:52:54,369 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:52:53.209738+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:52:54,372 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:52:53.209738+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:53:02,489 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-12T08:52:53.209738+00:00 exited with status success for try_number 1
+2023-01-12 16:53:02,501 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-12T08:52:53.209738+00:00, map_index=-1, run_start_date=2023-01-12 08:53:01.288683+00:00, run_end_date=None, run_duration=None, state=running, executor_state=success, try_number=1, max_tries=1, job_id=6, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-12 08:52:54.365562+00:00, queued_by_job_id=3, pid=68122
+2023-01-12 16:53:02,534 WARNING - Failing (1) jobs without heartbeat after 2023-01-12 08:48:02.531214+00:00
+2023-01-12 16:53:02,535 ERROR - Detected zombie job: {'full_filepath': '/Users/jiazhenwang/workspace/airflow/dags/download_stock_price.py', 'processor_subdir': '/Users/jiazhenwang/workspace/airflow/dags', 'msg': "{'DAG Id': 'Download_Stock_Price', 'Task Id': 'download_prices', 'Run Id': 'manual__2023-01-12T08:52:53.209738+00:00', 'Hostname': 'logi-fvfdf085p3yx.local'}", 'simple_task_instance': <airflow.models.taskinstance.SimpleTaskInstance object at 0x7fd608d47eb0>, 'is_failure_callback': True}
+2023-01-12 16:55:02,732 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 16:58:12,505 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:52:53.209738+00:00 [scheduled]>
+2023-01-12 16:58:12,506 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-12 16:58:12,507 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T08:52:53.209738+00:00 [scheduled]>
+2023-01-12 16:58:12,510 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-12T08:52:53.209738+00:00', try_number=2, map_index=-1) to executor with priority 1 and queue default
+2023-01-12 16:58:12,511 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:52:53.209738+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:58:12,513 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T08:52:53.209738+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 16:58:17,922 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-12T08:52:53.209738+00:00 exited with status success for try_number 2
+2023-01-12 16:58:17,931 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-12T08:52:53.209738+00:00, map_index=-1, run_start_date=2023-01-12 08:58:16.831292+00:00, run_end_date=None, run_duration=7.84202, state=running, executor_state=success, try_number=2, max_tries=1, job_id=7, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-12 08:58:12.509133+00:00, queued_by_job_id=3, pid=68321
+2023-01-12 16:58:17,957 WARNING - Failing (1) jobs without heartbeat after 2023-01-12 08:53:17.954933+00:00
+2023-01-12 16:58:17,960 ERROR - Detected zombie job: {'full_filepath': '/Users/jiazhenwang/workspace/airflow/dags/download_stock_price.py', 'processor_subdir': '/Users/jiazhenwang/workspace/airflow/dags', 'msg': "{'DAG Id': 'Download_Stock_Price', 'Task Id': 'download_prices', 'Run Id': 'manual__2023-01-12T08:52:53.209738+00:00', 'Hostname': 'logi-fvfdf085p3yx.local'}", 'simple_task_instance': <airflow.models.taskinstance.SimpleTaskInstance object at 0x7fd608bf0c40>, 'is_failure_callback': True}
+2023-01-12 16:58:23,260 ERROR - Marking run <DagRun Download_Stock_Price @ 2023-01-12 08:52:53.209738+00:00: manual__2023-01-12T08:52:53.209738+00:00, state:running, queued_at: 2023-01-12 08:52:53.219785+00:00. externally triggered: True> failed
+2023-01-12 16:58:23,262 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-12 08:52:53.209738+00:00, run_id=manual__2023-01-12T08:52:53.209738+00:00, run_start_date=2023-01-12 08:52:54.326570+00:00, run_end_date=2023-01-12 08:58:23.262173+00:00, run_duration=328.935603, state=failed, external_trigger=True, run_type=manual, data_interval_start=2023-01-11 08:52:53.209738+00:00, data_interval_end=2023-01-12 08:52:53.209738+00:00, dag_hash=a53adf0e6148c7c0fe30682f6158488f
+2023-01-12 16:58:23,265 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-12T08:52:53.209738+00:00, run_after=2023-01-13T08:52:53.209738+00:00
+2023-01-12 17:00:04,467 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:05:07,189 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:10:08,222 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:13:06,344 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T09:13:04.713422+00:00 [scheduled]>
+2023-01-12 17:13:06,346 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-12 17:13:06,347 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-12T09:13:04.713422+00:00 [scheduled]>
+2023-01-12 17:13:06,350 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-12T09:13:04.713422+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-12 17:13:06,351 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T09:13:04.713422+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 17:13:06,353 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-12T09:13:04.713422+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-12 17:13:12,276 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-12T09:13:04.713422+00:00 exited with status success for try_number 1
+2023-01-12 17:13:12,286 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-12T09:13:04.713422+00:00, map_index=-1, run_start_date=2023-01-12 09:13:11.160626+00:00, run_end_date=2023-01-12 09:13:11.617327+00:00, run_duration=0.456701, state=success, executor_state=success, try_number=1, max_tries=1, job_id=8, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-12 09:13:06.348360+00:00, queued_by_job_id=3, pid=68922
+2023-01-12 17:13:16,205 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-12 09:13:04.713422+00:00: manual__2023-01-12T09:13:04.713422+00:00, state:running, queued_at: 2023-01-12 09:13:04.728682+00:00. externally triggered: True> successful
+2023-01-12 17:13:16,206 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-12 09:13:04.713422+00:00, run_id=manual__2023-01-12T09:13:04.713422+00:00, run_start_date=2023-01-12 09:13:06.308726+00:00, run_end_date=2023-01-12 09:13:16.206088+00:00, run_duration=9.897362, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-11 09:13:04.713422+00:00, data_interval_end=2023-01-12 09:13:04.713422+00:00, dag_hash=a53adf0e6148c7c0fe30682f6158488f
+2023-01-12 17:13:16,209 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-12T09:13:04.713422+00:00, run_after=2023-01-13T09:13:04.713422+00:00
+2023-01-12 17:15:10,925 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:20:14,993 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:25:16,870 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:30:20,530 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:35:22,721 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:40:24,048 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:45:25,458 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:50:29,179 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 17:55:32,755 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:00:35,536 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:05:39,239 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:10:42,946 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:15:46,706 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:20:50,591 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:25:51,966 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:30:55,397 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:35:57,929 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:40:59,071 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:46:02,859 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:51:03,168 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 18:56:05,277 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:01:07,101 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:06:10,891 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:11:12,184 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:16:13,485 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:21:17,226 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:26:19,616 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:31:22,122 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:36:25,275 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:41:26,556 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:46:33,954 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:51:37,741 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 19:56:38,093 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:01:39,915 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:06:43,707 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:11:47,418 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:16:48,469 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:21:52,238 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:26:56,146 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:31:59,427 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:37:02,745 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:42:03,753 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:47:07,493 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:52:11,393 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 20:57:15,311 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:02:16,444 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:07:19,385 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:12:20,511 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:17:21,218 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:22:24,698 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:27:28,506 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:32:31,420 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:37:33,230 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:42:33,314 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:47:36,465 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:52:40,168 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 21:57:42,754 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:02:46,510 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:07:48,118 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:12:51,596 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:17:55,557 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:22:56,093 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:27:59,143 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:33:01,582 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:38:02,787 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:43:03,323 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:48:04,243 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:53:06,082 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 22:58:08,442 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:03:10,965 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:08:14,358 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:13:15,832 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:18:19,576 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:23:21,474 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:28:22,005 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:33:24,964 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:38:28,109 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:43:29,850 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:48:30,267 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:53:32,322 INFO - Resetting orphaned tasks for active dag runs
+2023-01-12 23:58:34,154 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:03:40,765 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:08:43,040 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:13:43,233 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:18:45,697 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:23:47,303 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:28:49,348 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:33:53,840 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:38:58,783 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:44:05,056 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:49:11,495 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:54:13,053 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 00:59:13,559 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 08:39:53,616 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 08:39:53,631 INFO - Marked 1 SchedulerJob instances as failed
+2023-01-13 08:44:55,477 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 08:50:05,373 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 08:55:08,821 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:00:09,812 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:05:09,947 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:10:14,881 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:15:17,981 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:20:18,261 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:25:19,740 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:29:24,624 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T01:29:23.700584+00:00 [scheduled]>
+2023-01-13 09:29:24,625 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 09:29:24,626 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T01:29:23.700584+00:00 [scheduled]>
+2023-01-13 09:29:24,629 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T01:29:23.700584+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 09:29:24,630 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T01:29:23.700584+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 09:29:24,632 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T01:29:23.700584+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 09:29:32,721 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T01:29:23.700584+00:00 exited with status success for try_number 1
+2023-01-13 09:29:32,737 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T01:29:23.700584+00:00, map_index=-1, run_start_date=2023-01-13 01:29:29.965817+00:00, run_end_date=2023-01-13 01:29:32.089693+00:00, run_duration=2.123876, state=success, executor_state=success, try_number=1, max_tries=1, job_id=9, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 01:29:24.627076+00:00, queued_by_job_id=3, pid=88980
+2023-01-13 09:29:36,866 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 01:29:23.700584+00:00: manual__2023-01-13T01:29:23.700584+00:00, state:running, queued_at: 2023-01-13 01:29:23.725262+00:00. externally triggered: True> successful
+2023-01-13 09:29:36,867 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 01:29:23.700584+00:00, run_id=manual__2023-01-13T01:29:23.700584+00:00, run_start_date=2023-01-13 01:29:24.603967+00:00, run_end_date=2023-01-13 01:29:36.867827+00:00, run_duration=12.26386, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 01:29:23.700584+00:00, data_interval_end=2023-01-13 01:29:23.700584+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 09:29:36,872 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T01:29:23.700584+00:00, run_after=2023-01-14T01:29:23.700584+00:00
+2023-01-13 09:30:20,507 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:35:24,265 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:40:25,732 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:45:30,626 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:50:30,738 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 09:55:30,802 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:00:33,979 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:05:37,591 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:10:38,917 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:15:41,477 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:20:43,228 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:25:46,900 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:30:50,778 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:35:52,036 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:40:53,225 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:45:56,971 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:50:57,576 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 10:56:02,069 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:01:02,338 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:06:06,223 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:11:10,515 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:16:10,752 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:21:12,460 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:26:14,025 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:31:17,779 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:36:19,153 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:41:22,198 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:46:25,570 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:51:31,035 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 11:56:31,571 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:01:34,826 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:06:38,983 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:11:39,801 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:16:42,006 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:21:45,017 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:26:45,478 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:31:47,776 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:36:50,909 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:41:54,564 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:46:55,167 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:51:55,277 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 12:56:56,474 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:01:58,436 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:07:01,584 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:12:03,063 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:17:06,344 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:22:08,002 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:27:08,470 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:32:09,477 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:37:11,596 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:42:14,731 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:47:15,513 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:52:16,740 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 13:57:19,233 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:02:21,828 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:07:23,627 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:12:27,499 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:17:27,951 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:22:32,551 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:27:34,667 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:32:36,653 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:37:39,667 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:42:39,917 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:47:43,644 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:52:44,036 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 14:57:46,926 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:02:48,312 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:07:48,629 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:12:52,447 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:17:53,915 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:22:54,792 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:27:55,961 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:32:57,226 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:35:18,287 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T07:35:17.809066+00:00 [scheduled]>
+2023-01-13 15:35:18,289 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 15:35:18,290 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T07:35:17.809066+00:00 [scheduled]>
+2023-01-13 15:35:18,292 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T07:35:17.809066+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 15:35:18,293 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T07:35:17.809066+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 15:35:18,296 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T07:35:17.809066+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 15:35:25,854 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T07:35:17.809066+00:00 exited with status success for try_number 1
+2023-01-13 15:35:25,865 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T07:35:17.809066+00:00, map_index=-1, run_start_date=2023-01-13 07:35:23.450232+00:00, run_end_date=2023-01-13 07:35:25.212215+00:00, run_duration=1.761983, state=success, executor_state=success, try_number=1, max_tries=1, job_id=10, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 07:35:18.291216+00:00, queued_by_job_id=3, pid=2588
+2023-01-13 15:35:29,986 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 07:35:17.809066+00:00: manual__2023-01-13T07:35:17.809066+00:00, state:running, queued_at: 2023-01-13 07:35:17.828723+00:00. externally triggered: True> successful
+2023-01-13 15:35:29,987 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 07:35:17.809066+00:00, run_id=manual__2023-01-13T07:35:17.809066+00:00, run_start_date=2023-01-13 07:35:18.266001+00:00, run_end_date=2023-01-13 07:35:29.987306+00:00, run_duration=11.721305, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 07:35:17.809066+00:00, data_interval_end=2023-01-13 07:35:17.809066+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 15:35:29,991 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T07:35:17.809066+00:00, run_after=2023-01-14T07:35:17.809066+00:00
+2023-01-13 15:38:01,275 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:43:01,479 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:46:33,506 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T07:46:29.455846+00:00 [scheduled]>
+2023-01-13 15:46:33,507 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 15:46:33,508 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T07:46:29.455846+00:00 [scheduled]>
+2023-01-13 15:46:33,511 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T07:46:29.455846+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 15:46:33,512 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T07:46:29.455846+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 15:46:33,514 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T07:46:29.455846+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 15:46:41,397 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T07:46:29.455846+00:00 exited with status success for try_number 1
+2023-01-13 15:46:41,408 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T07:46:29.455846+00:00, map_index=-1, run_start_date=2023-01-13 07:46:38.768924+00:00, run_end_date=2023-01-13 07:46:40.719565+00:00, run_duration=1.950641, state=success, executor_state=success, try_number=1, max_tries=1, job_id=11, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 07:46:33.509962+00:00, queued_by_job_id=3, pid=2938
+2023-01-13 15:46:45,411 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 07:46:29.455846+00:00: manual__2023-01-13T07:46:29.455846+00:00, state:running, queued_at: 2023-01-13 07:46:29.473109+00:00. externally triggered: True> successful
+2023-01-13 15:46:45,412 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 07:46:29.455846+00:00, run_id=manual__2023-01-13T07:46:29.455846+00:00, run_start_date=2023-01-13 07:46:33.487421+00:00, run_end_date=2023-01-13 07:46:45.412635+00:00, run_duration=11.925214, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 07:46:29.455846+00:00, data_interval_end=2023-01-13 07:46:29.455846+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 15:46:45,416 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T07:46:29.455846+00:00, run_after=2023-01-14T07:46:29.455846+00:00
+2023-01-13 15:48:05,516 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:53:07,625 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 15:58:09,632 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:03:10,839 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:06:02,184 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T08:06:00.114823+00:00 [scheduled]>
+2023-01-13 16:06:02,185 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 16:06:02,186 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T08:06:00.114823+00:00 [scheduled]>
+2023-01-13 16:06:02,189 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T08:06:00.114823+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 16:06:02,190 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T08:06:00.114823+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:06:02,192 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T08:06:00.114823+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:06:10,072 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T08:06:00.114823+00:00 exited with status success for try_number 1
+2023-01-13 16:06:10,083 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T08:06:00.114823+00:00, map_index=-1, run_start_date=2023-01-13 08:06:07.274100+00:00, run_end_date=2023-01-13 08:06:09.438245+00:00, run_duration=2.164145, state=success, executor_state=success, try_number=1, max_tries=1, job_id=12, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 08:06:02.188237+00:00, queued_by_job_id=3, pid=3834
+2023-01-13 16:06:13,911 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 08:06:00.114823+00:00: manual__2023-01-13T08:06:00.114823+00:00, state:running, queued_at: 2023-01-13 08:06:00.120430+00:00. externally triggered: True> successful
+2023-01-13 16:06:13,913 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 08:06:00.114823+00:00, run_id=manual__2023-01-13T08:06:00.114823+00:00, run_start_date=2023-01-13 08:06:02.164152+00:00, run_end_date=2023-01-13 08:06:13.913089+00:00, run_duration=11.748937, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 08:06:00.114823+00:00, data_interval_end=2023-01-13 08:06:00.114823+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 16:06:13,916 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T08:06:00.114823+00:00, run_after=2023-01-14T08:06:00.114823+00:00
+2023-01-13 16:08:12,876 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:11:33,222 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T08:11:30.194975+00:00 [scheduled]>
+2023-01-13 16:11:33,224 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 16:11:33,225 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T08:11:30.194975+00:00 [scheduled]>
+2023-01-13 16:11:33,228 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T08:11:30.194975+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 16:11:33,230 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T08:11:30.194975+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:11:33,233 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T08:11:30.194975+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:11:47,027 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T08:11:30.194975+00:00 exited with status success for try_number 1
+2023-01-13 16:11:47,037 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T08:11:30.194975+00:00, map_index=-1, run_start_date=2023-01-13 08:11:40.361382+00:00, run_end_date=2023-01-13 08:11:46.257412+00:00, run_duration=5.89603, state=success, executor_state=success, try_number=1, max_tries=1, job_id=13, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 08:11:33.226609+00:00, queued_by_job_id=3, pid=4023
+2023-01-13 16:11:51,503 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 08:11:30.194975+00:00: manual__2023-01-13T08:11:30.194975+00:00, state:running, queued_at: 2023-01-13 08:11:30.210965+00:00. externally triggered: True> successful
+2023-01-13 16:11:51,505 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 08:11:30.194975+00:00, run_id=manual__2023-01-13T08:11:30.194975+00:00, run_start_date=2023-01-13 08:11:33.194309+00:00, run_end_date=2023-01-13 08:11:51.504893+00:00, run_duration=18.310584, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 08:11:30.194975+00:00, data_interval_end=2023-01-13 08:11:30.194975+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 16:11:51,509 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T08:11:30.194975+00:00, run_after=2023-01-14T08:11:30.194975+00:00
+2023-01-13 16:13:15,516 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:17:58,344 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T08:17:57.694004+00:00, run_after=2023-01-14T08:17:57.694004+00:00
+2023-01-13 16:17:58,372 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices scheduled__2023-01-12T08:17:57.694004+00:00 [scheduled]>
+2023-01-13 16:17:58,373 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 16:17:58,374 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices scheduled__2023-01-12T08:17:57.694004+00:00 [scheduled]>
+2023-01-13 16:17:58,376 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='scheduled__2023-01-12T08:17:57.694004+00:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 16:17:58,377 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'scheduled__2023-01-12T08:17:57.694004+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:17:58,379 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'scheduled__2023-01-12T08:17:57.694004+00:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:18:09,843 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=scheduled__2023-01-12T08:17:57.694004+00:00 exited with status success for try_number 1
+2023-01-13 16:18:09,856 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=scheduled__2023-01-12T08:17:57.694004+00:00, map_index=-1, run_start_date=2023-01-13 08:18:03.502060+00:00, run_end_date=2023-01-13 08:18:09.191328+00:00, run_duration=5.689268, state=success, executor_state=success, try_number=1, max_tries=1, job_id=14, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 08:17:58.375369+00:00, queued_by_job_id=3, pid=4211
+2023-01-13 16:18:13,986 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-12 08:17:57.694004+00:00: scheduled__2023-01-12T08:17:57.694004+00:00, state:running, queued_at: 2023-01-13 08:17:58.302074+00:00. externally triggered: False> successful
+2023-01-13 16:18:13,987 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-12 08:17:57.694004+00:00, run_id=scheduled__2023-01-12T08:17:57.694004+00:00, run_start_date=2023-01-13 08:17:58.356226+00:00, run_end_date=2023-01-13 08:18:13.987335+00:00, run_duration=15.631109, state=success, external_trigger=False, run_type=scheduled, data_interval_start=2023-01-12 08:17:57.694004+00:00, data_interval_end=2023-01-13 08:17:57.694004+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 16:18:13,990 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T08:17:57.694004+00:00, run_after=2023-01-14T08:17:57.694004+00:00
+2023-01-13 16:18:18,781 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:23:09,951 INFO - 1 tasks up for execution:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T16:22:38+08:00 [scheduled]>
+2023-01-13 16:23:09,953 INFO - DAG Download_Stock_Price has 0/16 running and queued tasks
+2023-01-13 16:23:09,954 INFO - Setting the following tasks to queued state:
+	<TaskInstance: Download_Stock_Price.download_prices manual__2023-01-13T16:22:38+08:00 [scheduled]>
+2023-01-13 16:23:09,956 INFO - Sending TaskInstanceKey(dag_id='Download_Stock_Price', task_id='download_prices', run_id='manual__2023-01-13T16:22:38+08:00', try_number=1, map_index=-1) to executor with priority 1 and queue default
+2023-01-13 16:23:09,957 INFO - Adding to queue: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T16:22:38+08:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:23:09,958 INFO - Executing command: ['airflow', 'tasks', 'run', 'Download_Stock_Price', 'download_prices', 'manual__2023-01-13T16:22:38+08:00', '--local', '--subdir', 'DAGS_FOLDER/download_stock_price.py']
+2023-01-13 16:23:18,039 INFO - Executor reports execution of Download_Stock_Price.download_prices run_id=manual__2023-01-13T16:22:38+08:00 exited with status success for try_number 1
+2023-01-13 16:23:18,049 INFO - TaskInstance Finished: dag_id=Download_Stock_Price, task_id=download_prices, run_id=manual__2023-01-13T16:22:38+08:00, map_index=-1, run_start_date=2023-01-13 08:23:14.390404+00:00, run_end_date=2023-01-13 08:23:17.404895+00:00, run_duration=3.014491, state=success, executor_state=success, try_number=1, max_tries=1, job_id=15, pool=default_pool, queue=default, priority_weight=1, operator=PythonOperator, queued_dttm=2023-01-13 08:23:09.955037+00:00, queued_by_job_id=3, pid=4425
+2023-01-13 16:23:21,802 INFO - Marking run <DagRun Download_Stock_Price @ 2023-01-13 08:22:38+00:00: manual__2023-01-13T16:22:38+08:00, state:running, queued_at: 2023-01-13 08:23:05.317077+00:00. externally triggered: True> successful
+2023-01-13 16:23:21,803 INFO - DagRun Finished: dag_id=Download_Stock_Price, execution_date=2023-01-13 08:22:38+00:00, run_id=manual__2023-01-13T16:22:38+08:00, run_start_date=2023-01-13 08:23:09.932777+00:00, run_end_date=2023-01-13 08:23:21.803784+00:00, run_duration=11.871007, state=success, external_trigger=True, run_type=manual, data_interval_start=2023-01-12 08:22:38+00:00, data_interval_end=2023-01-13 08:22:38+00:00, dag_hash=9fb1be916f66ccada5731a7386aaaa18
+2023-01-13 16:23:21,807 INFO - Setting next_dagrun for Download_Stock_Price to 2023-01-13T08:22:38+00:00, run_after=2023-01-14T08:22:38+00:00
+2023-01-13 16:23:21,833 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:28:23,690 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:33:28,226 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:38:28,625 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:43:28,826 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:48:33,156 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:53:36,226 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 16:58:40,197 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:03:42,002 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:08:42,454 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:13:42,503 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:18:47,274 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:23:58,743 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:29:03,703 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:34:10,890 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:39:19,385 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:44:26,692 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:49:35,464 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:50:41,829 WARNING - DagFileProcessorManager (PID=64177) exited with exit code -9 - re-launching
+2023-01-13 17:50:41,860 INFO - Launched DagFileProcessorManager with pid: 7671
+2023-01-13 17:54:43,655 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 17:59:46,693 INFO - Resetting orphaned tasks for active dag runs
+2023-01-13 18:04:52,542 INFO - Resetting orphaned tasks for active dag runs
