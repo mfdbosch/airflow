@@ -1,0 +1,61 @@
+2023-01-13 08:39:30,842 ERROR - [4 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-13 19:51:46,637 ERROR - [4 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-13 21:08:41,652 INFO - Received signal: 15. Closing gunicorn.
+2023-01-15 16:33:23,201 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-16 03:51:01,784 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-16 06:03:42,685 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-17 04:42:39,013 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-17 06:43:03,075 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-17 08:35:58,016 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-18 08:22:20,095 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-18 08:39:28,792 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-19 05:26:24,470 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-19 08:13:50,507 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-19 17:05:51,855 INFO - Received signal: 15. Closing gunicorn.
+2023-01-30 04:22:47,945 ERROR - [2 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-30 06:22:59,872 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-01-31 17:41:23,633 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-01 00:44:58,783 ERROR - [4 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-01 07:54:59,122 ERROR - [3 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-03 08:26:07,669 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-03 22:36:15,235 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-04 00:36:49,614 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-04 01:35:43,593 ERROR - [0 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-04 05:36:00,588 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-04 21:21:34,252 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-05 20:47:10,770 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-05 20:53:43,857 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-05 21:55:01,993 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-07 21:29:03,815 ERROR - [4 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-07 23:30:05,990 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-08 03:44:59,794 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-08 15:26:03,182 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-09 08:12:56,085 ERROR - [4 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-09 23:26:04,366 ERROR - [2 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-10 08:38:22,048 ERROR - [2 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-10 09:25:43,645 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-10 09:58:49,533 INFO - Received signal: 15. Closing gunicorn.
+2023-02-11 04:26:26,891 ERROR - [4 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-11 06:26:39,604 ERROR - [0 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-11 09:15:18,756 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-11 20:52:21,631 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-11 21:39:18,539 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-11 23:39:31,490 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:33:42,011 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:40:32,148 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:44:02,888 ERROR - [0 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:46:04,917 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:52:07,408 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 02:57:11,052 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 03:05:14,382 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 05:05:23,401 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 05:20:16,303 ERROR - [3 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-12 12:10:27,323 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-13 13:09:18,436 ERROR - [1 / 0] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-13 13:19:50,651 ERROR - [2 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-13 23:29:34,141 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-14 03:30:10,278 ERROR - [3 / 3] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-14 15:02:52,423 INFO - Received signal: 15. Closing gunicorn.
+2023-02-15 04:02:48,353 ERROR - [2 / 2] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-15 07:49:21,077 ERROR - [1 / 1] Some workers seem to have died and gunicorn did not restart them as expected
+2023-02-16 17:41:07,826 INFO - Received signal: 15. Closing gunicorn.
