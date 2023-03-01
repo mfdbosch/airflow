@@ -8,12 +8,14 @@ from airflow.providers.amazon.aws.transfers.local_to_s3 import LocalFilesystemTo
 from airflow.operators.python import BranchPythonOperator
 from airflow.utils.edgemodifier import Label
 from airflow.decorators import task
+from airflow.models import Variable
 
 import datetime as dt
 from loguru import logger
 from subprocess import call
 from pathlib import Path
 import os
+import ast
 
 os.environ["no_proxy"] = "*"
 
@@ -29,9 +31,11 @@ def _utc_to_cts(time_utc):
     return time_cts, int(time_cts_timestamp), time_cts_nodash
 
 
-def _fetch_data(source_id, target_id, col, db, batch, start_date):
+def _fetch_data(source_id, target_id, batch, start_date):
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
+    col = ast.literal_eval(Variable.get('db_collection_rbd'))['collection']
     start_timestamp = _utc_to_cts(start_date)[1]
-    print(start_timestamp)
+    print(f'start_timestamp:{start_timestamp}')
     items = []
     mongo_query = {'timestamp': {'$eq': 1675906110000}}
     source_db = MongoHook(conn_id=source_id)
@@ -53,7 +57,9 @@ def _fetch_data(source_id, target_id, col, db, batch, start_date):
     target_db.close_conn()
 
 
-def _dump_data(mongo_conn_id, start_date, db, col):
+def _dump_data(mongo_conn_id, start_date):
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
+    col = ast.literal_eval(Variable.get('db_collection_rbd'))['collection']
     hook = MongoHook(conn_id=mongo_conn_id)
     uri = hook.uri
     print(f'{uri}')
@@ -61,9 +67,11 @@ def _dump_data(mongo_conn_id, start_date, db, col):
     timestamp1 = 1675906110000
     time_cts_timestamp = _utc_to_cts(start_date)[1]
     print(time_cts_timestamp)
-    base_dir = '/Users/jiazhenwang/Downloads/dump'
+    # base_dir = '/Users/jiazhenwang/Downloads'
+    base_local_dir = Variable.get('base_local_dir')
+    print(f'base_local_dir:{base_local_dir}')
     time_cts_nodash = _utc_to_cts(start_date)[2]
-    dump_dir = base_dir+'/'+time_cts_nodash
+    dump_dir = base_local_dir+'/dump/'+time_cts_nodash
     Path(dump_dir).parent.mkdir(exist_ok=True)
     dump_cmd = """mongodump --uri=%s --authenticationDatabase=admin -d=%s -c=%s -q='{"timestamp": {"$eq": %s}}' -o=%s""" % (
         uri, db, col, timestamp1, dump_dir)
@@ -71,11 +79,13 @@ def _dump_data(mongo_conn_id, start_date, db, col):
     call(dump_cmd, shell=True)
 
 
-def _upload_files_s3(aws_conn_id, start_date, db, **context):
+def _upload_files_s3(aws_conn_id, start_date, **context):
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
     # start_time = f'2023-02-08T01:46:46.338212+00:00'
     time_cts_nodash = _utc_to_cts(start_date)[2]
-    base_dir = '/Users/jiazhenwang/Downloads/dump'
-    dump_dir = base_dir+'/'+time_cts_nodash
+    base_local_dir = Variable.get('base_local_dir')
+    dest_bucket =  Variable.get('s3_bucket_name')
+    dump_dir = base_local_dir+'/dump/'+time_cts_nodash
     print(dump_dir)
     Path(dump_dir).parent.mkdir(exist_ok=True)
     for root, dirs, files in os.walk(dump_dir):
@@ -86,7 +96,7 @@ def _upload_files_s3(aws_conn_id, start_date, db, **context):
                     task_id='upload_s3',
                     filename=dumpfile,
                     dest_key=f'{time_cts_nodash}/{db}/{f}',
-                    dest_bucket='wjzawsbucket',
+                    dest_bucket=dest_bucket,
                     aws_conn_id=aws_conn_id,
                     replace=True).execute(context)
                 print(f'成功上传{dumpfile}')
@@ -95,8 +105,8 @@ def _upload_files_s3(aws_conn_id, start_date, db, **context):
 default_args = {
     'owner': 'wjz',
     'email': ['jwang43@logitech.com', '948151143@qq.com'],
-    'email_on_failure': True,
-    'email_on_retry': True,
+    'email_on_failure': False,
+    'email_on_retry': False,
     'retries': 1,
     'retry_delay': dt.timedelta(seconds=30),
 }
@@ -105,8 +115,8 @@ dag = DAG(
     dag_id="data_archival_lifecycle",
     default_args=default_args,
     start_date=dt.datetime(year=2023, month=2, day=1),
-    end_date=dt.datetime(year=2023, month=2, day=14),
-    schedule=dt.timedelta(minutes=10),
+    end_date=dt.datetime(year=2023, month=3, day=14),
+    schedule=dt.timedelta(hours=1),
     catchup=False,
     tags=["Loginet",'dump']
 )
@@ -116,10 +126,8 @@ fetch_data = PythonOperator(
     task_id='fetch_data',
     python_callable=_fetch_data,
     op_kwargs={
-        'source_id': 'my_mongodb',
-        'target_id': 'my_mongodb',
-        'col': 'RawDataBucket',
-        'db': 'Logitech',
+        'source_id': '{{var.value.source_mongo_conn_id}}',
+        'target_id': '{{var.value.target_mongo_conn_id}}',
         'batch': 50,
         'start_date': '{{data_interval_start}}'
     },
@@ -128,11 +136,13 @@ fetch_data = PythonOperator(
 
 
 @task.branch(dag=dag, task_id='check_data')
-def _check_data(source_id, target_id, col, db, **context):
-    print(str(context['data_interval_start']))
-    print(type(context['data_interval_start']))
+def _check_data(**context):
+    source_id = Variable.get('source_mongo_conn_id')
+    target_id = Variable.get('target_mongo_conn_id')
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
+    col = ast.literal_eval(Variable.get('db_collection_rbd'))['collection']
     start_timestamp = _utc_to_cts(str(context['data_interval_start']))[1]
-    print(start_timestamp)
+    print(f'start_timestamp:{start_timestamp}')
     items = []
     mongo_query = {'timestamp': {'$eq': 1675906110000}}
     source_db = MongoHook(conn_id=source_id)
@@ -152,10 +162,8 @@ dump_data = PythonOperator(
     task_id='dump_data',
     python_callable=_dump_data,
     op_kwargs={
-        'mongo_conn_id': 'my_mongodb',
+        'mongo_conn_id': '{{var.value.source_mongo_conn_id}}',
         'start_date': '{{data_interval_start}}',
-        'db': 'Logitech',
-        'col': 'RawDataBucket'
     },
     dag=dag
 )
@@ -164,9 +172,8 @@ upload_files_s3 = PythonOperator(
     task_id='upload_files_s3',
     python_callable=_upload_files_s3,
     op_kwargs={
-        'aws_conn_id': 'my_s3',
+        'aws_conn_id': '{{var.value.aws_conn_id}}',
         'start_date': '{{data_interval_start}}',
-        'db': 'Logitech',
     },
     dag=dag
 )
@@ -187,7 +194,6 @@ email_task1 = EmailOperator(
 )
 
 
-check_data = _check_data('my_mongodb', 'my_mongodb',
-                         'RawDataBucket', 'Logitech')
+check_data = _check_data()
 check_data >> [fetch_data, email_task1]
 fetch_data >> dump_data >> upload_files_s3 >> email_task2

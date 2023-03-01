@@ -7,12 +7,14 @@ from airflow.operators.email import EmailOperator
 from airflow.providers.mongo.hooks.mongo import MongoHook
 from airflow.decorators import task
 from airflow.utils.edgemodifier import Label
+from airflow.models import Variable
 
 import datetime as dt
 from subprocess import call
 from pathlib import Path
 import os
 from loguru import logger
+import ast
 
 os.environ["no_proxy"] = "*"
 
@@ -28,12 +30,14 @@ def _utc_to_cts(time_utc):
 
 def _generate_local_path(start_date):
     time_cts_nodash = _utc_to_cts(start_date)[2]
-    base_local_dir = '/Users/jiazhenwang/Downloads/restore'
-    local_path = base_local_dir+'/'+time_cts_nodash
+    # base_local_dir = '/Users/jiazhenwang/Downloads'
+    base_local_dir = Variable.get('base_local_dir')
+    local_path = base_local_dir+'/restore/'+time_cts_nodash
     Path(local_path).parent.mkdir(exist_ok=True)
     return local_path
 
-def _download_files_s3(aws_conn_id,start_date,db,bucket_name,**context):
+def _download_files_s3(aws_conn_id,start_date,bucket_name,**context):
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
     time_cts_nodash = _utc_to_cts(start_date)[2]
     local_path = os.path.join(_generate_local_path(start_date),db)
     exist_files = []
@@ -55,7 +59,9 @@ def _download_files_s3(aws_conn_id,start_date,db,bucket_name,**context):
         print(f'成功下载文件:{file_name}')
 
 # _download_files_s3('my_s3','2023-02-08T01:46:46.338212+00:00','Logitech','wjzawsbucket')
-def _restore_data(mongo_conn_id,start_date,db,col):
+def _restore_data(mongo_conn_id,start_date):
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
+    col = ast.literal_eval(Variable.get('db_collection_rbd'))['collection']
     hook = MongoHook(conn_id=mongo_conn_id)
     uri = hook.uri
     uri = uri[:-6]
@@ -69,8 +75,8 @@ def _restore_data(mongo_conn_id,start_date,db,col):
 default_args = {
     'owner': 'wjz',
     'email': ['jwang43@logitech.com', '948151143@qq.com'],
-    'email_on_failure': True,
-    'email_on_retry': True,
+    'email_on_failure': False,
+    'email_on_retry': False,
     'retries': 1,
     'retry_delay': dt.timedelta(seconds=30),
 }
@@ -79,24 +85,28 @@ dag = DAG(
     dag_id="data_restore_lifecycle",
     default_args=default_args,
     start_date=dt.datetime(year=2023, month=2, day=1),
-    end_date=dt.datetime(year=2023, month=2, day=11),
-    schedule=dt.timedelta(minutes=10),
+    end_date=dt.datetime(year=2023, month=3, day=11),
+    schedule=dt.timedelta(hours=1),
     catchup=False,
     tags=["Loginet",'restore']
 )
 
 @task.branch(dag=dag, task_id='check_data')
-def _check_data(source_id, target_id, col, db, **context):
+def _check_data(**context):
+    source_id = Variable.get('source_mongo_conn_id')
+    target_id = Variable.get('target_mongo_conn_id')
+    db = ast.literal_eval(Variable.get('db_collection_rbd'))['db']
+    col = ast.literal_eval(Variable.get('db_collection_rbd'))['collection']
     print(str(context['data_interval_start']))
     print(type(context['data_interval_start']))
     start_timestamp = _utc_to_cts(str(context['data_interval_start']))[1]
-    print(start_timestamp)
+    print(f'start_timestamp:{start_timestamp}')
     items = []
     mongo_query = {'timestamp': {'$eq': 1675906110000}}
     source_db = MongoHook(conn_id=source_id)
     target_db = MongoHook(conn_id=target_id)
     source_col = source_db.get_collection(col, db)
-    # Logitech2 需要替换成db
+    # Logitech3 需要替换成db
     target_col = target_db.get_collection(col, 'Logitech3')
     source_count = source_col.count_documents(mongo_query)
     target_count = target_col.count_documents(mongo_query)
@@ -109,10 +119,9 @@ download_files_s3 = PythonOperator(
     task_id = 'download_files_s3',
     python_callable=_download_files_s3,
     op_kwargs={
-        'aws_conn_id':'my_s3',
+        'aws_conn_id':'{{var.value.aws_conn_id}}',
         'start_date':'{{data_interval_start}}',
-        'db':'Logitech',
-        'bucket_name':'wjzawsbucket'
+        'bucket_name':'{{var.value.s3_bucket_name}}'
     },
     dag= dag
 )
@@ -121,10 +130,8 @@ restore_data = PythonOperator(
     task_id ='restore_data',
     python_callable=_restore_data,
     op_kwargs={
-        'mongo_conn_id':'my_mongodb',
-        'start_date':'{{data_interval_start}}',
-        'db':'Logitech',
-        'col':'RawDataBucket'
+        'mongo_conn_id':'{{var.value.target_mongo_conn_id}}',
+        'start_date':'{{data_interval_start}}'
     },
     dag=dag
 )
@@ -145,7 +152,6 @@ no_action = EmailOperator(
     dag=dag
 )
 
-check_data = _check_data('my_mongodb', 'my_mongodb',
-                         'RawDataBucket', 'Logitech')
+check_data = _check_data()
 check_data >> Label("Need restore data") >> download_files_s3 >> restore_data >> send_success_email
 check_data >> Label("no data need to process") >> no_action
