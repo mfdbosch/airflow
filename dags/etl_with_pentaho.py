@@ -19,7 +19,7 @@ dag = DAG(
     dag_id="airflow_with_pentaho",
     default_args=default_args,
     start_date=dt.datetime(year=2023, month=2, day=1),
-    end_date=dt.datetime(year=2023, month=2, day=16),
+    end_date=dt.datetime(year=2023, month=3, day=16),
     schedule=dt.timedelta(minutes=10),
     catchup=False,
     tags=['Pentaho','SSH']
@@ -27,7 +27,7 @@ dag = DAG(
 
 ssh_task = SSHOperator(
     task_id = 'ssh_task',
-    ssh_conn_id= 'ssh_pentaho',
+    ssh_conn_id= '{{var.value.pentaho_server}}',
     command= 'sh /data/job/test.sh ',
     get_pty=True,
     cmd_timeout= 300,
