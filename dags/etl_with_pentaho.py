@@ -27,7 +27,7 @@ dag = DAG(
 
 ssh_task = SSHOperator(
     task_id = 'ssh_task',
-    ssh_conn_id= '{{var.value.pentaho_server}}',
+    ssh_conn_id= 'ssh_pentaho',
     command= 'sh /data/job/test.sh ',
     get_pty=True,
     cmd_timeout= 300,
