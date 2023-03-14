@@ -15,7 +15,7 @@ def create_dag(dag_id,schedule,default_args):
         schedule=schedule,
         catchup=False,
         description = "Prod to qa DB",
-        tags=['Pentaho','EMP']
+        tags=['Pentaho','EPM']
     )
 
     ssh_task = SSHOperator(

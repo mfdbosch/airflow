@@ -15,7 +15,7 @@ def create_dag(dag_id,schedule,default_args):
         schedule=schedule,
         catchup=False,
         description = "monitor epm procedure pcharlimitdata Job",
-        tags=['Pentaho','EMP','monitor']
+        tags=['Pentaho','EPM','monitor']
     )
 
     ssh_task = SSHOperator(
